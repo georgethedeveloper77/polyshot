@@ -71,7 +71,7 @@ export default class SearchableGooglePolyAssetList extends React.Component {
             autoCapitalize="none"
             value={this.state.searchQuery}
             onChangeText={this.onSearchChangeText}
-            onSubmitEditing={this.onSearchPress}
+            onSubmitEditing={this.onSearchPress} //enter on keyboard
           />
         </View>
         <Button title="Cancel" onPress={this.props.onCancelPress} />
