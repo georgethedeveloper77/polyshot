@@ -8,7 +8,7 @@ import {
   Button,
 } from "react-native";
 import { MaterialCommunityIcons as Icon } from "react-native-vector-icons";
-import GooglePolyAsset from "./GooglePolyAsset";
+import GooglePolyAsset from "./GooglePolyAsset";  //with {}
 
 export default class SearchableGooglePolyAssetList extends React.Component {
   static defaultProps = {

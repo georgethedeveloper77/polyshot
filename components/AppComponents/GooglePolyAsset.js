@@ -4,7 +4,7 @@ import { Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 export default class GooglePolyAsset extends React.Component {
   static defaultProps = {
     asset: {},
-    onPress: function () {},
+    onPress: function () {}, //funct doesnt do anything rather than c
   };
 
   render() {
