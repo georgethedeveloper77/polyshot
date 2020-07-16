@@ -6,7 +6,7 @@ require("./../util/MTLLoader");
 
 export default class GooglePoly {
   constructor(apiKey) {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey; 
     this.currentResults = [];
     this.nextPageToken = "";
     this.keywords = "";

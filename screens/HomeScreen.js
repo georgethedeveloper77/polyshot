@@ -8,7 +8,7 @@ import ApiKeys from './../constants/ApiKeys';
 import TurkeyObject from './../assets/objects/TurkeyObject.json';
 import { SearchableGooglePolyAssetList } from './../components/AppComponents';
 
-console.disableYellowBox = true; 
+console.disableYellowBox = true; // disiable error boxes
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -28,8 +28,8 @@ export default class HomeScreen extends React.Component {
   onContextCreate = async ({gl, scale, width, height, arSession}) => {
     // Initialize renderer...
     this.renderer = ExpoTHREE.createRenderer({gl});
-    this.renderer.setPixelRatio(scale);
-    this.renderer.setSize(width, height);
+    this.renderer.setPixelRatio(scale);  //sizing
+    this.renderer.setSize(width, height); //sizing itself
 
     // Initialize scene...
     this.scene = new THREE.Scene();
@@ -52,7 +52,7 @@ export default class HomeScreen extends React.Component {
     }
 
     // Render...
-    this.renderer.render(this.scene, this.camera);
+    this.renderer.render(this.scene, this.camera);  //ar session
   }
 
   onAddObjectPress = () => {
