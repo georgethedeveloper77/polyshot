@@ -1,4 +1,5 @@
-import { Notifications } from "expo";
+//import { Notifications } from "expo";
+import * as Notifications from 'expo-notifications';
 import React from "react";
 import { StackNavigator } from "react-navigation";
 

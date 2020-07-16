@@ -1,4 +1,8 @@
-import { Constants, Permissions, Notifications } from "expo";
+//import { Constants, Permissions, Notifications } from "expo";
+import * as Notifications from 'expo-notifications';
+import * as Permissions from 'expo-permissions';
+import Constants from 'expo-constants';
+
 
 // Example server, implemented in Rails: https://git.io/vKHKv
 const PUSH_ENDPOINT = "https://expo-push-server.herokuapp.com/tokens";
