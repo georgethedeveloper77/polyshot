@@ -89,7 +89,7 @@ export default class SearchableGooglePolyAssetList extends React.Component {
     }
 
     var results = [];
-    for (var i = 0; i < this.state.currentResults.length; i += 2) {
+    for (var i = 0; i < this.state.currentResults.length; i += 2) {  //checking length
       if (i == this.state.currentResults.length - 1) {
         results.push(
           <GooglePolyAsset

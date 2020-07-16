@@ -51,7 +51,7 @@ export default class GooglePoly {
       .then(
         function (data) {
           this.currentResults = this.currentResults.concat(data.assets);
-          this.nextPageToken = data.nextPageToken;
+          this.nextPageToken = data.nextPageToken;  //next page 11-20
 
           return Promise.resolve(data.assets);
         }.bind(this)
