@@ -13,7 +13,7 @@ export default class GooglePoly {
   }
 
   // Returns a query URL based on the given data...
-  static getQueryURL(apiKey, keywords, nextPageToken) {
+  static getQueryURL(apiKey, keywords, nextPageToken) {  
     var baseURL = "https://poly.googleapis.com/v1/assets?";
 
     var url = baseURL + "key=" + apiKey;
@@ -23,7 +23,7 @@ export default class GooglePoly {
     if (keywords) {
       url += "&keywords=" + encodeURIComponent(keywords);
     }
-    if (nextPageToken) {
+    if (nextPageToken) { //muitple pages
       url += "&pageToken=" + nextPageToken;
     }
     return url;
@@ -37,7 +37,7 @@ export default class GooglePoly {
   };
 
   // Returns the results of the current query...
-  getSearchResults() {
+  getSearchResults() {  //(keywords, nextpageToken)
     var url = GooglePoly.getQueryURL(
       this.apiKey,
       this.keywords,
@@ -45,7 +45,7 @@ export default class GooglePoly {
     );
 
     return fetch(url)
-      .then(function (response) {
+      .then(function (response) {  //convert to json
         return response.json();
       })
       .then(
